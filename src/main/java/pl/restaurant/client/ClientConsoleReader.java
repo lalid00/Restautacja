@@ -38,7 +38,7 @@ public class ClientConsoleReader {
         do{
             System.out.println("What is your name?");
             input = in.next();
-        } while (!StringValidator.validate(input, Constants.NAME_REGEX));
+        } while (StringValidator.validate(input, Constants.NAME_REGEX));
         return input;
     }
 
@@ -69,11 +69,7 @@ public class ClientConsoleReader {
             System.out.println("Do you have a loyalty card?");
             input = in.next();
         } while (!BooleanValidator.validateLoyaltyCard(input));
-        if(input.equalsIgnoreCase("yes")){
-            return true;
-        } else {
-            return false;
-        }
+        return input.equalsIgnoreCase("yes");
     }
 
 }

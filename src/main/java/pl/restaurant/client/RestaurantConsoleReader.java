@@ -74,7 +74,7 @@ public class RestaurantConsoleReader {
                     "B. Take a check\n" +
                     "C. Close the system");
             input = in.next();
-        } while (!StringValidator.validate(input.toUpperCase(), Constants.LETTER_REGEX));
+        } while (StringValidator.validate(input.toUpperCase(), Constants.LETTER_REGEX));
         return input.toUpperCase();
     }
     private static int getNumberOfPeople(Scanner in){
